@@ -1,0 +1,159 @@
+/* Reset bàsic */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.llesta {
+    text-decoration: line-through;
+}
+
+/* Cos i tipografia general */
+body {
+    background: radial-gradient(circle at center, #1c1f50 10%, #0d1038 50%); /* Fons més fosc amb índigo més profund */
+    font-family: 'Quicksand', sans-serif;
+    color: #e0d9f7;
+    padding: 2em;
+}
+
+/* Títol principal */
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 50px;
+    color: #c9a3ff;
+    padding: 0.5em;
+    text-align: center;
+    text-shadow: 1px 1px 4px rgba(201, 163, 255, 0.2);
+}
+
+/* Subtítol */
+h2 {
+    font-size: 20px;
+    text-align: center;
+    color: #dfc8ff;
+    margin-bottom: 2rem;
+}
+
+/* Contenidor principal */
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+/* Contenidor dels dos blocs */
+.cuadros {
+    display: flex;
+    flex-direction: row; /* Garantim que les caixes estiguin en fila */
+    gap: 50px; /* Espai entre les caixes */
+    justify-content: center;
+    flex-wrap: nowrap; /* Impedir que es trenquin a una nova línia */
+    max-width: 1200px; /* Amplada més gran */
+    width: 100%;
+}
+
+/* Bloc per afegir tasques */
+.nueva {
+    background-color: #2e1a47; 
+    width: 40%; /* Amplada més gran */
+    min-width: 350px;
+    padding: 1.5em;
+    text-align: center;
+    border-radius: 15px;
+    border: 2px solid #8e70c1;
+    box-shadow: 2px 2px 12px rgba(201, 163, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+/* Bloc de llista i filtre */
+.tareas {
+    background-color: #2e1a47;
+    width: 50%; /* Amplada més gran */
+    min-width: 400px;
+    padding: 1.5em;
+    border-radius: 15px;
+    border: 2px solid #a58cd1;
+    box-shadow: 2px 2px 12px rgba(201, 163, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.nueva:hover,
+.tareas:hover {
+    transform: translateY(-10px);
+    box-shadow: 4px 4px 20px rgba(201, 163, 255, 0.3);
+}
+
+
+/* Formulari per afegir tasques */
+.fila-afegir {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: 100%; /* Garantir que ocupa tot l'ample del bloc */
+    padding-top: 20px;
+}
+
+/* Formulari de cerca dins de .tareas */
+.buscador {
+    margin-bottom: 15px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: 100%; /* Garantir que ocupa tot l'ample del bloc */
+}
+
+/* Camp d'entrada i botó */
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: 'Quicksand', sans-serif;
+    width: 100%; /* L'input ocupa tot l'espai disponible */
+    background-color: #2e1b4f; /* Fons més fosc per als inputs */
+    color: #f0eaff; /* Color de text més clar */
+}
+
+.buscador button, .fila-afegir button {
+    background-color: #b28fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    white-space: nowrap; /* Evita que el botó es trenqui */
+}
+
+.buscador button:hover, .fila-afegir button:hover {
+    background-color: #9d78f7;
+}
+
+/* Llista de tasques */
+.chek {
+    list-style: none;
+    line-height: 2.5em;
+    color: #f0eaff;
+    padding-left: 0;
+    line-height: 2.5em;
+}
+
+
+/* Responsiu */
+@media screen and (max-width: 768px) {
+    .cuadros {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nueva, .tareas {
+        width: 90%;
+    }
+}
+
+
+

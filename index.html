@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malifetes</title>
+    <link rel="stylesheet" href="./CSS/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Quicksand&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="titol">
+        <h1>Malifeta feta</h1>
+        <h2>Organitza’t amb un toc de màgia</h2>
+    </header>
+     <main class="main">
+        <section class="cuadros">
+
+            <!-- Bloc per afegir tasques -->
+            <div class="nueva">
+                <form id="formAfegir" class="form-afegir">
+                    <label for="novaTasca">Afegeix una tasca:</label>
+                    <div class="fila-afegir">
+                        <input type="text" id="novaTasca" placeholder="Escriu una nova malifeta...">
+                        <button type="submit" class="btn-add">Afegeix</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Bloc per filtrar i mostrar les tasques -->
+            <div class="tareas">
+                <form id="formFiltrar" class="buscador">
+                    <input type="text" id="filtrarTasca" placeholder="Filtra per paraula clau...">
+                    <!-- (Opcional) Botó si vols fer una acció explícita -->
+                    <button class="btn-buscar">Buscar</button>
+                </form>
+
+                <ul id="llistaTasques" class="chek js_llista">
+                    <!-- Les tasques es pintaran amb JS -->
+                </ul>
+            </div>
+
+        </section>
+
+        <script src="./JS/main.js"></script>
+    </main>
+    
+</body>
+</html>
